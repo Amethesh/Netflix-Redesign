@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap');
+
+:root{
+    --primary: #EF5A63;
+    --light: #F5F5F5;
+    --dark: #161617;
+    --light-dark: #313132;
+    --gray: #C2C2C2;
+    --lightshadow: hsla(0, 0%, 64%,.7);
+    --white60: hsla(0, 0%, 96%,.8);
+    --primary-light: hsla(356, 82%, 65%,.6);
+    
+}
+/* Just for Preview */
+.bg-card{
+    height: auto;
+}
+
+
+/*-------------------------Floating Button Style Start------------------------*/
+.float-btn{
+    position: fixed;
+    bottom: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: center;  
+    padding: 0 10px;
+    z-index: 99;
+}
+
+.float-btn .float-read{    
+    font-size: 22px;
+    font-weight: bold;
+    border-style: none;      
+    background-color: var(--primary);
+    font-family: "Quicksand",monospace;    
+    color: var(--light);
+    border-radius: 30px;
+    margin-right: 20px;
+    width: 300px;
+    height: 55px;
+}
+
+.float-btn .float-heart{
+    border-style: none;      
+    background-color: var(--light-dark);  
+    border-radius: 100px;
+    width: 55px;
+    height: 55px;
+}
+
+.float-btn .float-heart i{
+    color: var(--primary);
+    font-size: 25px;
+    text-align: center;
+    line-height: 60px;
+}
+
+
+/*-------------------------Floating Button Style End------------------------*/
+.auto-scroll .large-card-details-4{
+    grid-row: 4 / 4;
+    grid-column: 1 / 3;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.auto-scroll .readnow{    
+    border-radius: 15px;
+    width: 120px;
+    height: 42px;    
+}
+
+.auto-scroll .moreinfo{   
+    border-style: none;      
+    background-color: var(--dark);
+    font-family: "Quicksand",monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--light);
+    border-radius: 15px;
+    width: 80%;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px black
+    ,-2px -2px 10px var(--lightshadow);
+}
+
+
+/*-------------------------Main Grid------------------------*/
+.main-info-grid{
+    margin-top: 20px;
+    display: grid;
+    /* width: 300px; */
+    width: 100%;
+    grid-template-columns: .5fr 1fr;
+    grid-template-areas: "info info"
+                    "synopsis synopsis"
+                    "rating genres"
+                    "rating genres"
+                    "synonyms synonyms"
+                    "audio audio";
+
+}
+
+/* Info Heading */
+.main-info-grid .info-heading{
+    font-family: "Secular One",monospace;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: var(--primary-light);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/*-------------------------Info------------------------*/
+.main-info-grid .info{
+    grid-area: info;
+    /* justify-self: center;     */
+    padding: 10px;
+    /* width: minmax(min-content,max-content); */
+}
+
+.main-info-grid .info .info-line{
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-info-grid .info .info-line .info-title{
+    font-family: 'Secular One',monospace;
+    font-size: 22px;
+    font-weight: lighter;
+    color: var(--gray);
+}
+
+.main-info-grid .info .info-line .info-details{
+    font-size: 18px;
+    /* font-weight: lighter; */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+/*-------------------------Synopsis------------------------*/
+.main-info-grid .synopsis{
+    grid-area: synopsis;
+    /* justify-self: center; */
+    font-family: "Secular One",monospace;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+.main-info-grid .synopsis p{
+    font-family: "Quicksand",monospace;
+    font: bold;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/*-------------------------Genres------------------------*/
+.main-info-grid .genres{
+    grid-area: genres;
+    /* justify-self: center; */
+    font-family: "Secular One",monospace;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+.main-info-grid .genres .genres-image-list{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(80px,1fr));    
+    height: 180px;
+    overflow-y: auto; 
+    gap: 5px;   
+} 
+
+.main-info-grid .genres .genres-image{
+    /* padding: 10px;     */
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.main-info-grid .genres .genres-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+/*-------------------------rating------------------------*/
+.main-info-grid .rating{
+    grid-area: rating;
+    justify-self: center;
+    font-family: "Secular One",monospace;
+    letter-spacing: 1px;
+    padding: 10px 15px 10px 20px;
+}
+
+.main-info-grid .rating .rating-box{
+    background-color: var(--light-dark);
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black
+    ,-2px -2px 10px var(--lightshadow);
+}
+
+.rating .rating-box div{
+    font-size: 16px;
+    font-family: "Quicksand",monospace;
+    font-weight: bold;
+    color: var(--light);
+    padding-bottom: 10px;
+}
+
+.rating .rating-box div i{
+    color: var(--primary-light);
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+/*-------------------------Synonyms------------------------*/
+.main-info-grid .synonyms{
+    grid-area: synonyms;
+    /* justify-self: center; */
+    font-family: "Secular One",monospace;
+    padding: 10px;
+    
+}
+
+/* Scroll Box */
+.scroll-box{
+    /* min-width: 100px;
+    max-width: 200px; */
+    width: 90vw;
+    overflow-x: auto;
+}
+
+.scroll-box::-webkit-scrollbar{
+    width: 0;
+}
+
+.scroll-box ul span{
+    background-color: var(--light-dark);
+    border-radius: 10px;
+    justify-content: space-evenly;
+}
+
+.main-info-grid .scroll-box ul{
+    list-style: none;
+    color: var(--light);
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    font-size: 14px;
+}
+
+.scroll-box ul li{
+    padding: 8px 8px;
+}
+
+/*-------------------------Audio Info------------------------*/
+.main-info-grid .audio-info{
+    grid-area: audio;
+    /* justify-self: center; */
+    font-family: "Secular One",monospace;
+    padding: 10px;
+}
+
+/*-------------------------Chapters List------------------------*/
+.chapters{    
+    padding: 10px;
+}
+
+.chapters h2{
+    font-family: "Secular One",monospace;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: var(--primary-light);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+.chapters .scroll-volume{
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+
+.chapters .scroll-volume ul{
+    list-style: none;
+    font-size: 14px;
+    font-family: 'QuickSand',monospace;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 15px;
+    width: max-content;
+    white-space: nowrap;
+
+}
+
+.chapters .scroll-volume span{
+    background-color: var(--light-dark);
+    border-radius: 10px;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.chapters .scroll-volume span li{
+    padding: 8px 10px;
+}
+
+.chapters .scroll-volume ul :is(span:hover , span:focus,span:active){
+    background-color: var(--primary-light);
+}
+
+.chapters .chapter-list{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); */
+}
+
+.chapter-list ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+
+.chapter-list ul li{
+    background-color: var(--light-dark);
+    border-radius: 11px;
+    margin: 10px;
+    padding: 20px 15px 15px 20px;
+    box-shadow: 3px 3px 10px black;    
+    box-shadow: 5px 5px 8px black
+    ,-2px -2px 5px var(--lightshadow);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chapter-list ul li span{
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'QuickSand',monospace;
+    font-family: 'Secular One',monospace;
+    font-weight: lighter;
+    color: var(--light);
+}
+
+.chapter-list ul li .chapter-no{
+    color: var(--gray);
+}
+
+.chapter-list ul li .chapter-name{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.chapter-list ul li span i{
+    color: var(--gray);
+    font-size: 20px;
+}
+
+
+.chapter-list ul :is(li:hover , li:focus,li:active){
+    background-color: var(--primary-light);
+    box-shadow: 5px 5px 10px black
+    ,-2px -2px 8px var(--primary);
+}
+
+
+
+
+/*-------------------------Recommended------------------------*/
+.recommended{    
+    /* padding: 10px; */
+}
+
+.bg-card .block-area {
+    padding: 10px;
+}
+
+.header-title{
+    /* margin-left: -10px ; */
+}
+.header-title h2{
+    
+    /* color: var(--primary-light);
+    font-weight: bold;
+    font-size: 20px; */
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: none;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1040px){
+
+    .auto-scroll .large-card-details-4{
+        grid-row: 2 / 2;
+        grid-column: 3 / 3;
+        align-self: start;
+        justify-self: center;
+        margin-left: 100px;
+    }
+
+    .auto-scroll .readnow{        
+        border-radius: 15px;
+        width: 180px;
+        height: 55px;        
+    }
+
+    .auto-scroll .moreinfo{
+        display: inline;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 15px;
+        width: 180px;
+        height: 55px;
+        padding: .5em;
+        box-shadow: 5px 5px 10px black
+    ,-2px -2px 10px var(--lightshadow);
+    }
+
+    .main-info-grid .synopsis{
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1334px){
+
+
+    .float-btn{
+        display: none;
+    }
+
+    .main-info-grid{
+        /* min-width: 0px; */
+        grid-template-columns: minmax(300px,600px) minmax(200px, 300px) minmax(300px,600px);
+        grid-template-areas: 
+                        "genres rating info"
+                        "synonyms rating audio";
+    
+    }
+
+    .main-info-grid .info-heading{
+        margin-bottom: 8px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .main-info-grid .rating{
+        width: 90%;
+    }
+    .main-info-grid .rating .rating-box{
+        padding: 20px 20px;
+        /* text-align: center; */
+    }
+
+    .main-info-grid .rating .rating-box h2{
+        text-align: center;
+    }
+
+    .rating .rating-box div{
+        font-size: 22px;
+        margin-left: 20px;
+    }
+
+    .rating .rating-box div i{
+        font-size: 22px;
+        padding-top: 10px;
+        padding-left: 3px;
+    }
+
+    .main-info-grid .genres .genres-image-list{
+        grid-template-columns: repeat( auto-fit, minmax(120px, 1fr)); 
+        height: 140px;   
+           
+    } 
+
+    .main-info-grid .genres .genres-image{
+        width: 120px;
+        height: 120px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+}

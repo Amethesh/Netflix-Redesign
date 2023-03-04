@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./Logo/Geass.png " type="image/png" />
+    <script
+      src="https://kit.fontawesome.com/241aa0e9f3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Log In</title>
+    <link rel="stylesheet" href="loginStyle.css" />
+  </head>
+  <body>
+    <section>
+      <div class="imgBox">
+        <img src="./background/class1.png.jpg" alt="IMG" />
+      </div>
+      <div class="contentBox">
+        <div class="formBox">
+          <span><h2 id="indicator">Log in</h2></span>
+          <div class="button-Box">
+            <div id="btn"></div>
+            <button class="toggle" onclick="login()">Log In</button>
+            <button class="toggle" onclick="signup()">Sign Up</button>
+          </div>
+          <div id="trans">
+            <form id="login" class="input-group">
+              <div class="inputBox">
+                <input
+                  type="text"
+                  class="input-field"
+                  placeholder="User Id"
+                  required
+                />
+              </div>
+              <div class="inputBox">
+                <input
+                  type="password"
+                  class="input-field"
+                  placeholder="Enter Password"
+                  required
+                />
+              </div>
+              <div class="remember">
+                <label><input type="checkbox" /> Remember me</label>
+              </div>
+              <div class="inputBox">
+                <input type="submit" value="Log In" />
+              </div>
+
+              <h3>Login with social media</h3>
+              <ul class="logos">
+                <li><i class="fa-brands fa-google"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-github"></i></li>
+              </ul>
+            </form>
+
+            <form id="signup" class="input-group">
+              <div class="inputBox">
+                <input
+                  type="text"
+                  class="input-field"
+                  placeholder="User Id"
+                  required
+                />
+              </div>
+              <div class="inputBox">
+                <input
+                  type="text"
+                  class="input-field"
+                  placeholder="Email Id"
+                  required
+                />
+              </div>
+              <div class="inputBox">
+                <input
+                  type="password"
+                  class="input-field"
+                  placeholder="Enter Password"
+                  required
+                />
+              </div>
+              <div class="remember">
+                <label
+                  ><input type="checkbox" /> I agree to terms and
+                  conditions</label
+                >
+              </div>
+              <div class="inputBox">
+                <input type="submit" value="Log In" />
+              </div>
+
+              <h3>Login with social media</h3>
+              <ul class="logos">
+                <li><i class="fa-brands fa-google"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-github"></i></li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let x = document.getElementById("login");
+      let y = document.getElementById("signup");
+      let z = document.getElementById("btn");
+      let indi = document.getElementById("indicator");
+      function signup() {
+        x.style.display = "none";
+        y.style.display = "inline";
+        z.style.left = "50%";
+        indi.innerText = "Sign Up";
+      }
+
+      function login() {
+        x.style.display = "inline";
+        y.style.display = "none";
+        z.style.left = "0";
+        indi.innerText = "Log In";
+      }
+    </script>
+  </body>
+</html>

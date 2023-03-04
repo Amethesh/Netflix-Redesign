@@ -1,0 +1,39 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200;400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,400&display=swap');
+
+:root{
+    --primary: #3E2AD1;
+    --light: #9B9B9B;
+    --dark: #191233;
+    --light-dark: #313132;
+    --gray: #C2C2C2;
+    --lightshadow: hsla(0, 0%, 64%,.7);
+    --white60: hsla(0, 0%, 96%,.8);
+    --primary-light: hsla(356, 82%, 65%,.8);
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto",monospace;
+}
+
+.primary-nav{
+    background-color: var(--primary);
+    height: 100vh;
+    width: max-content;
+    
+}
+
+.primary-nav ul{
+    margin-right: 20px;
+
+}
+.primary-nav a{
+    color: var(--gray);
+    text-decoration: none;
+}
+
