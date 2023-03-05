@@ -380,7 +380,7 @@ progress {
 .movie-info .card-title{
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+-webkit-box-orient: vertical;
     overflow: hidden;
     position: relative;
     top: -30px;
