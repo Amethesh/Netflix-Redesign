@@ -139,11 +139,9 @@ body {
 /* ------------------------Large Auto Scroll Items Start------------------------*/
 .auto-scroll{    
     /* min-width: 400px; */
-    margin: 1rem auto;
-    max-width: 1400px;
-    height: 240px;
-    height: auto;
-    
+    margin: 2.5rem auto;
+    max-width: 1000px;
+    height: 300px;
     /* height: 29vh; */
     width: 85vw;
     border-radius: 30px;
@@ -152,10 +150,10 @@ body {
 }
 
 .large-card-bg{    
-    box-shadow: -3px -3px 10px var(--lightshadow);
+    /* box-shadow: -3px -3px 10px var(--lightshadow); */
     height: inherit;
     background-color: var(--light);
-    background-image:url(./background/86-EIGHTY-SIX-16x9-1.webp);
+    background-image:url(https://ca-times.brightspotcdn.com/dims4/default/bdd5189/2147483647/strip/true/crop/6000x4000+0+0/resize/1200x800!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F2b%2Fd1%2F5a6fa294482e85768aa7d5750cc6%2Fla-photos-handouts-la-ca-joker-movie-102.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: inherit;
@@ -167,7 +165,7 @@ body {
     height: inherit;
     width: 100%;
     border-radius: inherit;
-    background-color: rgba(0, 0, 0, 0.80);
+    background-color: rgba(0, 0, 0, 0.30);
 }
 
 
@@ -192,6 +190,7 @@ body {
     grid-column: 1 / 2;
     grid-row: 1 / 4 ; 
     /* background-color: aqua; */
+    display: none;
 }
 
 .auto-scroll .large-card-bg .poster img{
@@ -203,23 +202,23 @@ body {
 
 .large-card-details-1{
     grid-row: 1 / 2;
-    grid-column: 2 / 2;
+    grid-column: 1 / 2;
     align-self: end;
 }
 
 .large-card-details-2{
     grid-row: 2 / 3;
-    grid-column: 2 / 2;
+    grid-column: 1 / 2;
     align-self: end;
     justify-self: center;     
 }
 
 .large-card-details-3{
-    grid-column: 2 / 2;
     grid-row: 3 / 3;
+    grid-column: 1 / 2;
     align-self: center;
     text-align: center; /* To center the Button*/    
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .large-card-details-1 h3{
@@ -239,47 +238,57 @@ body {
     padding-left: 5px;
 }
 .auto-scroll .poster-container p{
-    display: none;
-    font-family: "Quicksand",monospace;
+    font-family: "Exo",monospace;
     color: var(--white60);
-    font-size: 14px;    
-    font-weight: light;
+    font-size: 40px;    
+    font-weight: bold;
+    text-align: left;
+    padding-top: 10px;
 }
 
 
 .poster-container ul{
     list-style: none;
     display: inline-flex;
-    font-size: 12px;
+    font-size: 15px;
     gap: 10px; 
-    font-family: "Quicksand",monospace;   
+    font-family: "Roboto",monospace;   
     color: var(--white60) ;
 }
 
 /* Button Style */
 .auto-scroll .readnow{
     border-style: none;
-    background-color: var(--primary);
-    font-family: "Quicksand",monospace;
+    background-color: #ca1044;
+    font-family: "Exo",monospace;
     font-size: 1rem;
-    font-weight: bold;
-    color: var(--light);
+    /* font-weight: ; */
+    color: white;
     border-radius: inherit;
     width: 115px;
     height: 42px;
-    padding: .5em;
+    padding: .3em;
     cursor: pointer;
     box-shadow: 5px 5px 10px black
-    ,-2px -2px 10px var(--primary);
+    ,-2px -2px 10px #D71E2A;
+    margin-right: 70px;
 }
 
+.auto-scroll .readnow i{
+    padding-left: 8px;
+}
+
+progress {
+    accent-color: #ca1044;
+}
 
 
 .auto-scroll .readnow:active{
     box-shadow: none;
 }
 .auto-scroll .readnow:hover{
-    background-color: hsl(356, 82%, 70%);
+    /* background-color: #d71e2a65; */
+    box-shadow: none;
 }
 .large-card-details-3:active{
     box-shadow: none;
